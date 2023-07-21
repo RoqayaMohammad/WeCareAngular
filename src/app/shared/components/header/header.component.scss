@@ -1,3 +1,42 @@
+$logo-width: 150px;
+$logo-height: 80px;
+
 ul li {
   list-style: none;
+}
+
+// .logo-list {
+//   // display: flex;
+//   // justify-content: flex-end;
+//   // align-items: center;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: center;
+//   list-style: none;
+// }
+
+// .logo-list button {
+//   border: none; /* Remove the button border */
+//   background: transparent; /* Remove the button background */
+//   padding: 0; /* Remove the button padding */
+//   margin: 0; /* Remove the button margin */
+// }
+
+// .logo-list mat-icon {
+//   font-size: 24px;
+//   color: #000;
+// }
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  width: $logo-width;
+  height: $logo-height;
+}
+
+
+
+@media (max-width: 768px) {
+  $logo-width: 80%;
+  $logo-height: auto;
 }
