@@ -11,6 +11,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DashboardService } from 'src/app/modules/dashboard.service';
 
 
 @NgModule({
@@ -31,6 +32,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatPaginatorModule,
     MatTableModule
 
+  ],
+  providers: [
+    DashboardService
   ]
 })
 export class DefaultModule { }
