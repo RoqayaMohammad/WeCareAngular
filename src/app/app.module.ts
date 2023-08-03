@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
+import { ScheduleModule, RecurrenceEditorModule, DayService, WeekService,WorkWeekService, MonthService, MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
+
+//import schedulerModule, RecurrenceEditorModule, DayService, WeekService, WorkWeekService, MonthService, MonthAgendaServic
+
 
 @NgModule({
   declarations: [
@@ -17,11 +21,12 @@ import { DefaultModule } from './layouts/default/default.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule
+    DefaultModule,
+    ScheduleModule, RecurrenceEditorModule
 
 
   ],
-  providers: [],
+  providers: [DayService, WeekService,WorkWeekService, MonthService, MonthAgendaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

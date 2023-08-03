@@ -13,6 +13,8 @@ import { AreaComponent } from './widgets/area/area.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
+import { ApointmentScheduleComponent } from './components/apointment-schedule/apointment-schedule.component';
+import { ScheduleModule, RecurrenceEditorModule, DayService, WeekService,WorkWeekService, MonthService, MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
 
 
 
@@ -27,6 +29,7 @@ import { PieComponent } from './widgets/pie/pie.component';
     AreaComponent,
     CardComponent,
     PieComponent,
+    ApointmentScheduleComponent,
   ],
   imports: [
     CommonModule,
@@ -36,8 +39,10 @@ import { PieComponent } from './widgets/pie/pie.component';
     MatButtonModule,
     MatMenuModule,
     MatListModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    ScheduleModule, RecurrenceEditorModule
   ],
+  providers: [DayService, WeekService,WorkWeekService, MonthService, MonthAgendaService],
   exports: [
     HeaderComponent,
     FooterComponent,
